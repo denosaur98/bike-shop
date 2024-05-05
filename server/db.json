@@ -1,0 +1,208 @@
+{
+  "bikes": [
+    {
+      "id": "1",
+      "brand": "Kink",
+      "model": "Curb",
+      "color": "чёрный",
+      "year": 2022,
+      "price": 29990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/kink/curb/curb1.jpg",
+        "/_nuxt/static/assets/bikes/kink/curb/curb2.jpg",
+        "/_nuxt/static/assets/bikes/kink/curb/curb3.jpg",
+        "/_nuxt/static/assets/bikes/kink/curb/curb4.jpg",
+        "/_nuxt/static/assets/bikes/kink/curb/curb5.jpg",
+        "/_nuxt/static/assets/bikes/kink/curb/curb6.jpg",
+        "/_nuxt/static/assets/bikes/kink/curb/curb7.jpg",
+        "/_nuxt/static/assets/bikes/kink/curb/curb8.jpg"
+      ],
+      "description": "BMX начального уровня, который ощущается как топовый байк. Такое ощущение появляется благодаря современной геометрии рамы, фирменному рулю с подъёмом 8.75\", трёх-элементным шатунам, широким покрышкам Mission Tracker шириной 2.4\" и многим другим афтермаркет запастям. Kink Curb отличный вариант для первого BMX."
+    },
+    {
+      "id": "2",
+      "brand": "Kink",
+      "model": "Launch",
+      "color": "серый",
+      "year": 2022,
+      "price": 32990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/kink/launch/launch1.jpg",
+        "/_nuxt/static/assets/bikes/kink/launch/launch2.jpg",
+        "/_nuxt/static/assets/bikes/kink/launch/launch3.jpg",
+        "/_nuxt/static/assets/bikes/kink/launch/launch4.jpg",
+        "/_nuxt/static/assets/bikes/kink/launch/launch5.jpg",
+        "/_nuxt/static/assets/bikes/kink/launch/launch6.jpg",
+        "/_nuxt/static/assets/bikes/kink/launch/launch7.jpg",
+        "/_nuxt/static/assets/bikes/kink/launch/launch8.jpg"
+      ],
+      "description": "BMX Kink Launch - байк продвинутого уровня, обладающий рамой с современной геометрией, MID кареткой и интегрированной рулевой. На велосипеде установлен удобный руль с подъёмом 8.75\", хроммолибденовая вилка с классическим выбегом, трёх-элементная система, покрышки Kink Sever шириной 2.4\". Рулевая и каретка на промышленных подшипниках. Отличный байк для новичка."
+    },
+    {
+      "id": "3",
+      "brand": "Kink",
+      "model": "Gap",
+      "color": "оранжевый",
+      "year": 2023,
+      "price": 39990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/kink/gap/gap1.jpg",
+        "/_nuxt/static/assets/bikes/kink/gap/gap2.jpg",
+        "/_nuxt/static/assets/bikes/kink/gap/gap3.jpg",
+        "/_nuxt/static/assets/bikes/kink/gap/gap4.jpg",
+        "/_nuxt/static/assets/bikes/kink/gap/gap5.jpg",
+        "/_nuxt/static/assets/bikes/kink/gap/gap6.jpg",
+        "/_nuxt/static/assets/bikes/kink/gap/gap7.jpg",
+        "/_nuxt/static/assets/bikes/kink/gap/gap8.jpg"
+      ],
+      "description": "BMX Kink Gap - это универсальный байк продвинутого уровня, который отлично подойдёт для катания в любой дисциплине. Велосипед собран на хроммолибденовой раме с современной геометрией, хроммолибденовой вилке с классическим выбегом и хроммолибденовым рулём с подъёмом 9\". В каретке, рулевой и задней втулке стоят промышленные подшипники. Так же байк укомплектован трёх-элементными шатунами, широкими покрышками Kink Sever с цепким протектором, фирменными педалями Kink Hemlock и многими другими афтермаркет запчастями. Отличный байк для любого райдера."
+    },
+    {
+      "id": "4",
+      "brand": "Sunday",
+      "model": "Brett Silva",
+      "color": "красный",
+      "year": 2022,
+      "price": 69990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva1.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva2.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva3.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva4.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva5.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva6.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva7.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva8.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva9.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva10.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva11.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva12.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva13.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva14.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva15.jpg",
+        "/_nuxt/static/assets/bikes/sunday/brett-silva/brett-silva16.jpg"
+      ],
+      "description": "Forecaster это байк который выглядит, ощущается и едет как байк про-уровня. Он укомплектован автермаркет запчастями брендов Odyssey и Sunday, такими как педали Twisted Pro и покрышки Path Pro. Этот байк готов к самым жестким нагрузкам и не подведёт своего владельца. Данная модель имеет промодельную расцветку райдера команды Sunday Brett Silva. Тормоза и тормозные крепления в комплекте!"
+    },
+    {
+      "id": "5",
+      "brand": "Sunday",
+      "model": "Erik Elstran",
+      "color": "серый",
+      "year": 2023,
+      "price": 73990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran1.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran2.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran3.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran4.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran5.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran6.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran7.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran8.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran9.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran10.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran11.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran12.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran13.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran14.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran15.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran16.jpg",
+        "/_nuxt/static/assets/bikes/sunday/erik-elstran/erik-elstran17.jpg"
+      ],
+      "description": "Байк продвинутого уровня с фреймсетом из 100% хромолибдена, промодель Erik Elstran, а это значит он полностью готов к жестким нагрузкам! Оснащен афтермаркет кассетной втулкой Odyssey C5 и естественно укомплектован запчастями Sunday/Odyssey."
+    },
+    {
+      "id": "6",
+      "brand": "Sunday",
+      "model": "Street Sweeper",
+      "color": "розовый / фиолетовый",
+      "year": 2023,
+      "price": 82990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper1.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper2.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper3.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper4.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper5.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper6.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper7.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper8.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper9.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper10.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper11.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper12.jpeg",
+        "/_nuxt/static/assets/bikes/sunday/street-sweeper/street-sweeper13.jpeg"
+      ],
+      "description": "Самый выгодный комплит байк, который вы можете приобрести в сборе. Велосипед профессионального уровня. Афтермаркет рама и топовые комплектующие от ведущих брендов Odyssey/Sunday. Промодель Jake Seeley."
+    },
+    {
+      "id": "7",
+      "brand": "WeThePeople",
+      "model": "Arcade",
+      "color": "красный",
+      "year": 2023,
+      "price": 47990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade1.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade2.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade3.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade4.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade5.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade6.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade7.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade8.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade9.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/arcade/arcade10.jpeg"
+      ],
+      "description": "Байк среднего уровня с проверенными запчастями Salt и Eclat, такими как покрышки Salt+ и педали Eclat, грипсами EX и тормозной системой Geo XL, а так же втулками на промышленных подшипниках. Байк обладает классической геометрией, поэтому хорошо подходит как для стрита так и для парка, подойдет для райдеров начального и продвинутого уровня."
+    },
+    {
+      "id": "8",
+      "brand": "WeThePeople",
+      "model": "Crs",
+      "color": "красный",
+      "year": 2023,
+      "price": 50990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs1.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs2.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs3.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs4.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs5.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs6.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs7.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs8.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs9.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs10.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs11.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs12.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs13.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs14.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/crs/crs15.jpeg"
+      ],
+      "description": "Байк среднего уровня с проверенными запчастями Salt и Eclat, такими как покрышки Salt+ и педали Eclat, грипсами EX и тормозной системой Geo XL, а так же втулками на промышленных подшипниках. Байк обладает классической геометрией, поэтому хорошо подходит как для стрита так и для парка, подойдет для райдеров начального и продвинутого уровня."
+    },
+    {
+      "id": "9",
+      "brand": "WeThePeople",
+      "model": "Justice",
+      "color": "тёмно-серый",
+      "year": 2023,
+      "price": 56990,
+      "photo": [
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice1.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice2.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice3.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice4.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice5.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice6.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice7.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice8.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice9.jpeg",
+        "/_nuxt/static/assets/bikes/wethepeople/justice/justice10.jpeg"
+      ],
+      "description": "Байк продвинутого уровня с проверенными запчастями Salt+ и Wethepeople, такими как покрышки и педали WTP, тормозной системой Geo XL, а так же втулками на промышленных подшипниках. Фреймсет велосипеда изготовлен полностью из 4130 хромолибдена (рама/вилка/руль). Байк обладает классической геометрией, поэтому хорошо подходит как для стрита так и для парка, подойдет для райдеров любого уровня."
+    }
+  ]
+}
