@@ -18,11 +18,12 @@ import BikeCard from '../components/BikeCard';
   justify-content: center;
   height: 100%;
   min-height: 100vh;
+  padding: 50px;
 
   .home__cards-wrapper {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 30px;
+    gap: 50px;
   }
 }
 </style>
