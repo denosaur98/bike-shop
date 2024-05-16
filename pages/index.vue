@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home__page">
     <div class="home__cards-wrapper">
       <BikeCard/>
     </div>
@@ -11,7 +11,7 @@ import BikeCard from '../components/BikeCard';
 </script>
 
 <style lang="scss" scoped>
-.home {
+.home__page {
   display: flex;
   flex-direction: column;
   align-items: center;

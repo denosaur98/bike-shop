@@ -33,7 +33,7 @@ const props = defineProps({
   overflow: hidden;
 
   .item__photo {
-    width: 350px;
+    width: 100%;
     height: auto;
     background-size: cover;
   }

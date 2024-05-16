@@ -5,11 +5,11 @@
         <font-awesome-icon class="favorites__icon" :icon="['fas', 'heart']" :class="{ 'favorites__icon-active': isFavorite(bike.id) }"/>
       </button>
     </div>
-    <NuxtLink :to="`/bike/${bike.brand}-${bike.model}-${bike.year}`">
+    <NuxtLink :to="`/${bike.brand}-${bike.model}-${bike.year}`">
       <Swiper :photos="bike.photo"/>
     </NuxtLink>
     <div class="item__info">
-      <NuxtLink :to="`/bike/${bike.brand}-${bike.model}-${bike.year}`" class="info__title" :title="`${bike.brand} ${bike.model} ${bike.year} ${bike.color}`">
+      <NuxtLink :to="`/${bike.brand}-${bike.model}-${bike.year}`" class="info__title" :title="`${bike.brand} ${bike.model} ${bike.year} ${bike.color}`">
         <span class="title__brand">{{ bike.brand }}&nbsp;</span> 
         <span class="title__model">{{ bike.model }}</span> {{ bike.year }} {{ bike.color }}
       </NuxtLink>
