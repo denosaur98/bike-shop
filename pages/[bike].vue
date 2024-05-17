@@ -4,12 +4,31 @@
     <div class="bike__pay-block">
       <div class="pay__photos">
         <NuxtLink>
-          <img :src="selectedBike.photo[0]" class="photos__image-active">
+          <img :src="isActivePhoto" class="photos__image-active">
         </NuxtLink>
         <div class="photos__grid">
-          <NuxtLink v-for="photo in selectedBike.photo" :key="photo" :to="photo">
+          <NuxtLink v-for="photo in selectedBike.photo" :key="photo" @click.prevent="setActivePhoto(photo)">
             <img :src="photo" class="photos__image">
           </NuxtLink>
+        </div>
+      </div>
+      <div class="pay__info">
+        <h1 class="info__price">{{ selectedBike.price }} <span>₽</span></h1>
+        <div class="info__stock">
+          <p>{{ inStockText }}</p>
+          <font-awesome-icon :icon="['fas', 'check']" />
+        </div>
+        <div class="info__cart">
+          <div class="cart__counter">
+            <button class="counter__btn" @click="minusBikeAmount">-</button>
+            <input class="counter__input" v-model="bikeCount">
+            <button class="counter__btn" @click="plusBikeAmount">+</button>
+            <p class="counter__warning" v-if="countWarning">Макс. кол-во <br> в наличии</p>
+          </div>
+          <button class="cart__add" @click="addToCart">
+            В корзину
+            <font-awesome-icon :icon="['fas', 'bag-shopping']"/>
+          </button>
         </div>
       </div>
     </div>
@@ -21,20 +40,62 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
-import Swiper from '../components/Swiper';
 import store from '../store/index';
 
 const route = useRoute()
 const selectedBike = ref(null)
+const isActivePhoto = ref(null)
 onMounted(async() => {
   await store.dispatch('fetchBikes')
   selectedBike.value = store.state.bikes.find(item => item.model === route.path.replace(/^[^-]*-|-[^-]*$/g, ''))
+  isActivePhoto.value = selectedBike.value.photo[0]
 })
+
+function setActivePhoto(photo) {
+  isActivePhoto.value = photo
+}
+
+const inStockText = computed(() => selectedBike.value.inStock ? 'В наличии' : 'Временно нет')
+
+const bikeCount = ref(1)
+const countWarning = ref(false)
+function minusBikeAmount() {
+  if(bikeCount.value > 1) {
+    bikeCount.value--
+    countWarning.value = false
+  }
+}
+function plusBikeAmount() {
+  if(bikeCount.value < selectedBike.value.amount) {
+    bikeCount.value++
+  } else {
+    countWarning.value = true
+  }
+}
+
+function addToCart() {
+  const bike = {
+    cartItemId: store.state.cart.length + 1,
+    id: selectedBike.value.id,
+    brand: selectedBike.value.brand,
+    model: selectedBike.value.model,
+    color: selectedBike.value.color,
+    year: selectedBike.value.year,
+    price: selectedBike.value.price,
+    photo: selectedBike.value.photo[0],
+    amount: bikeCount.value,
+    sum: selectedBike.value.price * bikeCount.value
+  }
+  store.dispatch('addToCart', bike)
+}
 </script>
 
 <style lang="scss" scoped>
+a {
+  cursor: pointer;
+}
 .bike__page {
   display: flex;
   flex-direction: column;
@@ -53,6 +114,7 @@ onMounted(async() => {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 30px;
+    gap: 50px;
 
     .pay__photos {
       display: flex;
@@ -75,6 +137,98 @@ onMounted(async() => {
         .photos__image {
           width: 154px;
           height: auto;
+        }
+      }
+    }
+
+    .pay__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      .info__price {
+        font-size: 35px;
+        line-height: 100%;
+        font-weight: 700;
+
+        span {
+          font-size: 25px;
+        }
+      }
+
+      .info__stock {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        line-height: 100%;
+
+        p {
+          text-decoration: underline;
+        }
+      }
+
+      .info__cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 50px;
+        gap: 50px;
+
+        .cart__counter {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 120px;
+          position: relative;
+
+          .counter__btn {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+          }
+
+          .counter__input {
+            text-align: center;
+            width: 50px;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 2px 1px #9e9e9e;
+            padding: 3px;
+            border-radius: 3px;
+            font-size: 15px;
+          }
+
+          .counter__warning {
+            position: absolute;
+            color: rgba(204, 0, 0, 0.9);
+            font-size: 13px;
+            top: 30px;
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+        .cart__add {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          background: #000;
+          border: none;
+          border-radius: 5px;
+          font-size: 15px;
+          padding: 7px;
+          width: 250px;
+          gap: 10px;
         }
       }
     }

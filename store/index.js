@@ -6,6 +6,7 @@ export default createStore({
 		return {
 			bikes: [],
 			favorites: [],
+			cart: [],
 		}
 	},
 	mutations: {
@@ -21,6 +22,9 @@ export default createStore({
 				state.favorites.push(bike)
 			}
 		},
+		ADD_TO_CART(state, bike) {
+			state.cart.push(bike)
+		},
 	},
 	actions: {
 		async fetchBikes({ commit }) {
@@ -29,6 +33,9 @@ export default createStore({
 		},
 		addToFavorites({ commit }, bikeId) {
 			commit('ADD_TO_FAVORITES', bikeId)
+		},
+		addToCart({ commit }, bike) {
+			commit('ADD_TO_CART', bike)
 		},
 	},
 })
