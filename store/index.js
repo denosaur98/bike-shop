@@ -25,6 +25,14 @@ export default createStore({
 		ADD_TO_CART(state, bike) {
 			state.cart.push(bike)
 		},
+		ADD_TO_FAVORITES_IN_BIKE_PAGE(state, bikeId) {
+			const index = state.favorites.findIndex(bike => bike === bikeId)
+			if (index !== -1) {
+				state.favorites.splice(index, 1)
+			} else {
+				state.favorites.push(bikeId)
+			}
+		},
 	},
 	actions: {
 		async fetchBikes({ commit }) {

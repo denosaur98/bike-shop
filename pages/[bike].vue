@@ -25,10 +25,15 @@
             <button class="counter__btn" @click="plusBikeAmount">+</button>
             <p class="counter__warning" v-if="countWarning">Макс. кол-во <br> в наличии</p>
           </div>
-          <button class="cart__add" @click="addToCart">
-            В корзину
-            <font-awesome-icon :icon="['fas', 'bag-shopping']"/>
-          </button>
+          <div class="cart__add">
+            <button class="add__favorites" @click="toggleFavorite">
+              <font-awesome-icon :class="isFavorite ? 'favorites__icon-active' : 'favorites__icon'" :icon="isFavorite ? ['fas', 'heart'] : ['far', 'heart']"/>
+            </button>
+            <button class="add__pay" @click="addToCart">
+              В корзину
+              <font-awesome-icon :icon="['fas', 'bag-shopping']"/>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -89,6 +94,12 @@ function addToCart() {
     sum: selectedBike.value.price * bikeCount.value
   }
   store.dispatch('addToCart', bike)
+}
+
+const isFavorite = ref(false)
+function toggleFavorite() {
+  store.commit('ADD_TO_FAVORITES_IN_BIKE_PAGE', selectedBike.value)
+  isFavorite.value = !isFavorite.value
 }
 </script>
 
@@ -217,18 +228,48 @@ a {
         }
 
         .cart__add {
-          cursor: pointer;
           display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #fff;
-          background: #000;
-          border: none;
-          border-radius: 5px;
-          font-size: 15px;
-          padding: 7px;
           width: 250px;
           gap: 10px;
+
+          .add__favorites {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            padding: 7px;
+            border-radius: 5px;
+            color: #808080;
+            border: none;
+
+            .favorites__icon {
+              width: 20px;
+              height: 20px;
+            }
+
+            .favorites__icon-active {
+              color: rgb(199, 0, 0);
+              width: 20px;
+              height: 20px;
+              transition: .2s;
+            }
+          }
+
+          .add__pay {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 7px;
+            width: 200px;
+            gap: 10px;
+          }
         }
       }
     }

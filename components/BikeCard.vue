@@ -79,6 +79,7 @@ a {
       cursor: pointer;
       background: none;
       border: none;
+      color: #808080;
 
       .favorites__icon {
         width: 20px;
@@ -116,7 +117,6 @@ a {
 
       .title__model {
         font-weight: 700;
-        font-style: italic;
       }
     }
 
