@@ -35,11 +35,11 @@
             </button>
           </div>
         </div>
+        <div class="bike__info">
+          <h1 class="info__title">Описание</h1>
+          <p class="info__description">{{ selectedBike.description }}</p>
+        </div>
       </div>
-    </div>
-    <div class="bike__info">
-      <h1 class="info__title">Описание</h1>
-      <p class="info__description">{{ selectedBike.description }}</p>
     </div>
   </div>
 </template>
@@ -93,7 +93,7 @@ function addToCart() {
     amount: bikeCount.value,
     sum: selectedBike.value.price * bikeCount.value
   }
-  store.dispatch('addToCart', bike)
+  store.commit('ADD_TO_CART_IN_BIKE_PAGE', bike)
 }
 
 const isFavorite = ref(false)
@@ -272,24 +272,25 @@ a {
           }
         }
       }
-    }
-  }
 
-  .bike__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+      .bike__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 50px;
 
-    .info__title {
-      font-size: 25px;
-      font-weight: 900;
-      margin-bottom: 10px;
-    }
+        .info__title {
+          font-size: 25px;
+          font-weight: 900;
+          margin-bottom: 10px;
+        }
 
-    .info__description {
-      font-size: 20px;
-      font-weight: 400;
+        .info__description {
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
     }
   }
 }

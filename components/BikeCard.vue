@@ -15,7 +15,7 @@
       </NuxtLink>
       <div class="info__pay">
         <h2 class="info__price">{{ bike.price }}₽</h2>
-        <button class="pay__btn">В корзину
+        <button class="pay__btn" @click="addToCart(bike)">В корзину
           <font-awesome-icon :icon="['fas', 'bag-shopping']"/>
         </button>
       </div>
@@ -34,7 +34,11 @@ function isFavorite(id) {
   return store.state.favorites.some(bike => bike.id === id)
 }
 function toggleFavorite(id) {
-  store.dispatch('addToFavorites', id)
+  store.commit('ADD_TO_FAVORITES_IN_BIKE_CARD', id)
+}
+
+function addToCart(bike) {
+  store.commit('ADD_TO_CART_IN_BIKE_CARD', bike)
 }
 </script>
 
