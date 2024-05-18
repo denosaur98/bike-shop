@@ -47,6 +47,12 @@ export default createStore({
 				state.favorites.push(bikeId)
 			}
 		},
+		REMOVE_FROM_CART(state, bikeId) {
+			const index = state.cart.findIndex(bike => bike.id === bikeId)
+			if (index !== -1) {
+				state.cart.splice(index, 1)
+			}
+		},
 	},
 	actions: {
 		async fetchBikes({ commit }) {
