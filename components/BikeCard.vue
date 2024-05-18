@@ -2,7 +2,7 @@
   <div class="bike__item" v-for="bike in store.state.bikes" :key="bike.id">
     <div class="item__favorites-container">
       <button class="favorites__btn" @click="toggleFavorite(bike.id)">
-        <font-awesome-icon class="favorites__icon" :icon="['fas', 'heart']" :class="{ 'favorites__icon-active': isFavorite(bike.id) }"/>
+        <font-awesome-icon class="favorites__icon" :icon="isFavorite(bike.id) ? ['fas', 'heart'] : ['far', 'heart']" :class="{ 'favorites__icon-active': isFavorite(bike.id) }"/>
       </button>
     </div>
     <NuxtLink :to="`/${bike.brand}-${bike.model}-${bike.year}`">
