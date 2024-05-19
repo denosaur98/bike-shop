@@ -20,6 +20,7 @@
           <p class="item__price">{{ bike.price }} <span>₽</span></p>
         </div>
       </div>
+      <UserForm/>
     </div>
     <p class="cart__info" v-else>В корзине пусто</p>
   </div>
@@ -28,6 +29,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import store from '../store/index.js'
+import UserForm from '../components/UserForm';
 
 onMounted(async() => await store.state.cart)
 
