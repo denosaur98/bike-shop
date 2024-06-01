@@ -2,62 +2,148 @@
   <div class="form__wrapper">
     <form class="user__form">
       <div class="form__item">
-        <label for="username">Фамилия</label>
-        <input placeholder="введите фамилию:">
+        <label>Фамилия</label>
+        <v-text-field
+          v-model="surname"
+          placeholder="введите фамилию:"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item">
-        <label for="username">Имя</label>
-        <input placeholder="введите имя:">
+        <label>Имя</label>
+        <v-text-field
+          v-model="name"
+          placeholder="введите имя:"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item">
-        <label for="username">Отчество</label>
-        <input placeholder="введите отчество:">
+        <label>Отчество</label>
+        <v-text-field
+          v-model="patronymic"
+          placeholder="введите отчество:"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item">
-        <label for="username">Почта</label>
-        <input placeholder="введите почту:">
+        <label>Почта</label>
+        <v-text-field
+          v-model="mail"
+          placeholder="введите почту:"
+          type="email"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item">
-        <label for="username">Телефон</label>
-        <input placeholder="введите телефон:">
+        <label>Телефон</label>
+        <v-text-field
+          v-model="phone"
+          placeholder="введите телефон:"
+          type="number"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item">
-        <label for="username">Город</label>
-        <input placeholder="введите город:">
+        <label>Город</label>
+        <v-text-field
+          v-model="city"
+          placeholder="введите город:"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item">
-        <label for="username">Улица</label>
-        <input placeholder="введите улицу:">
+        <label>Улица</label>
+        <v-text-field
+          v-model="street"
+          placeholder="введите улицу:"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item-wrapper">
         <div class="form__item">
-          <label for="username">Дом</label>
-          <input placeholder="введите дом:">
+          <label>Дом</label>
+          <v-text-field
+            v-model="home"
+            placeholder="введите дом:"
+            variant="outlined"
+            style="width: 100%;"
+          />
         </div>
         <div class="form__item">
-          <label for="username">Квартира/Офис</label>
-          <input placeholder="введите кв/офис:">
+          <label>Квартира/Офис</label>
+          <v-text-field
+            v-model="flat"
+            placeholder="введите кв/офис:"
+            type="number"
+            variant="outlined"
+            style="width: 100%;"
+          />
         </div>
       </div>
       <div class="form__item">
-        <label for="username">Индекс</label>
-        <input placeholder="введите индекс:">
+        <label>Индекс</label>
+        <v-text-field
+          v-model="indexNum"
+          placeholder="введите индекс:"
+          type="number"
+          variant="outlined"
+          style="width: 100%;"
+        />
       </div>
       <div class="form__item">
-        <label for="username">Способ доставки</label>
+        <label>Способ доставки</label>
         <v-select
+          v-model="deliveryMethod"
           :items="['Почта России', 'EMS', 'CDEK', 'DHL']"
           variant="outlined"
           style="width: 100%;"
         />
       </div>
-      <button class="form__submit">Оформить</button>
+      <button class="form__submit" @click="addOrder">Оформить</button>
     </form>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import store from '../store/index';
 
+const surname = ref('')
+const name = ref('')
+const patronymic = ref('')
+const mail = ref('')
+const phone = ref('')
+const city = ref('')
+const street = ref('')
+const home = ref('')
+const flat = ref('')
+const indexNum = ref('')
+const deliveryMethod = ref('')
+
+function addOrder() {
+  const order = {
+    surname: surname.value,
+    name: name.value,
+    patronymic: patronymic.value,
+    mail: mail.value,
+    phone: phone.value,
+    city: city.value,
+    street: street.value,
+    home: home.value,
+    flat: flat.value,
+    indexNum: indexNum.value,
+    deliveryMethod: deliveryMethod.value,
+    bikes: store.state.cart
+  }
+  store.commit('ADD_ORDER', order)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -87,16 +173,6 @@
       align-items: flex-start;
       width: 100%;
       gap: 5px;
-
-      input {
-        border-radius: 5px;
-        border: 1px solid #9e9e9e;
-        width: 100%;
-        outline: none;
-        padding: 5px;
-        font-size: 12px;
-        text-transform: uppercase;
-      }
     }
 
     .form__submit {

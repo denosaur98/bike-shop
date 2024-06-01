@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  target: "static",
   build: {
     transpile: ['vuetify'],
   },

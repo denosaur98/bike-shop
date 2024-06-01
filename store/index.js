@@ -7,6 +7,7 @@ export default createStore({
 			bikes: [],
 			favorites: [],
 			cart: [],
+			order: [],
 		}
 	},
 	mutations: {
@@ -52,6 +53,10 @@ export default createStore({
 			if (index !== -1) {
 				state.cart.splice(index, 1)
 			}
+		},
+		ADD_ORDER(state, order) {
+			state.order.push(order)
+			axios.post('http://localhost:3001/orders', order)
 		},
 	},
 	actions: {

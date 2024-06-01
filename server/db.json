@@ -222,5 +222,6 @@
       "inStock": true,
       "amount": 2
     }
-  ]
+  ],
+  "orders": []
 }
